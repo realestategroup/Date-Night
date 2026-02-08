@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Night Planner - Embeddable Version</title>
+    <link rel="stylesheet" href="embed-style.css">
+</head>
+<body>
+    <div class="embed-container">
+        <header class="header">
+            <h1>🌟 Date Night Planner</h1>
+            <p class="subtitle">Plan the perfect evening with personalized recommendations</p>
+        </header>
+
+        <div class="card">
+            <div class="step-header">
+                <div class="step-number">1</div>
+                <h2>Date Details</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="dateType">Date Type</label>
+                    <select id="dateType">
+                        <option value="first-date">First Date</option>
+                        <option value="casual">Casual Outing</option>
+                        <option value="romantic">Romantic Evening</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="adventure">Adventure Date</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dateTime">Date & Time</label>
+                    <input type="datetime-local" id="dateTime">
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget ($)</label>
+                    <input type="number" id="budget" placeholder="100" min="0" step="10">
+                </div>
+                <div class="form-group">
+                    <label for="dateLocation">Location</label>
+                    <input type="text" id="dateLocation" placeholder="City or neighborhood">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="step-header">
+                <div class="step-number">2</div>
+                <h2>Activity Preferences</h2>
+            </div>
+            <div class="preferences-grid" id="datePreferencesGrid">
+                <!-- Preferences will be dynamically inserted -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="step-header">
+                <div class="step-number">3</div>
+                <h2>Additional Preferences</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="atmosphere">Atmosphere</label>
+                    <select id="atmosphere">
+                        <option value="intimate">Intimate</option>
+                        <option value="lively">Lively</option>
+                        <option value="relaxed">Relaxed</option>
+                        <option value="upscale">Upscale</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="transportation">Transportation</label>
+                    <select id="transportation">
+                        <option value="drive">Driving</option>
+                        <option value="walk">Walking</option>
+                        <option value="public">Public Transit</option>
+                        <option value="rideshare">Rideshare</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <select id="duration">
+                        <option value="2-3">2-3 hours</option>
+                        <option value="3-4">3-4 hours</option>
+                        <option value="4-6">4-6 hours</option>
+                        <option value="full-day">Full Day</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dressCode">Dress Code</label>
+                    <select id="dressCode">
+                        <option value="casual">Casual</option>
+                        <option value="smart-casual">Smart Casual</option>
+                        <option value="semi-formal">Semi-Formal</option>
+                        <option value="formal">Formal</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <button class="calculate-btn" id="dateNightBtn">
+                <span>🌟</span>
+                Plan My Date Night
+            </button>
+        </div>
+
+        <div class="results-section hidden" id="dateNightResults">
+            <div class="card">
+                <h2>Your Date Night Itinerary</h2>
+                <div id="dateItineraryContent"></div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn-secondary" id="dateNightResetBtn">🔄 Plan Another Date</button>
+            </div>
+        </div>
+
+        <div class="embed-footer">
+            <p>Powered by Date Night Planner | <a href="index.html" target="_blank">Open Full Version</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
